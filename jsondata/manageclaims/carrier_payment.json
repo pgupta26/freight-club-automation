@@ -1,0 +1,11 @@
+{
+	"paymeneType": "Carrier Payment Details",
+	"paymentSource": "Carrier Payment",
+	"carrierPaymentAmount": "800.00",
+	"overpaymentType": "Freight",
+	"overpayment": "100.00",
+	"carrierChequeNumber": "12345",
+	"paymentDate": "09-24-2022",
+	"claimStatus": "Claim Approved",
+	"internalStatus": "Ready to Adjudicate"
+}

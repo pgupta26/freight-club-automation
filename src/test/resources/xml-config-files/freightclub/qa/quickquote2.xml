@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Quick Quote Suite">
+
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="com.qualitesoft.core.CustomTestListener" />
+	</listeners>
+
+	<parameter name="project" value="FreightClub" />
+	<parameter name="browser" value="chrome" />
+	<parameter name="env" value="qa" />
+	<parameter name="URL" value="https://qa.freightclub.com/" />  
+	<parameter name="retryCount" value="1" />
+	
+	<parameter name="testData" value="testdata/FCfiles/qa/QuickQuote/QuickQuoteTestData.xlsx" />
+	
+	<test name="Test verify order details as Admin">
+		<parameter name="fcusername" value="freightclubinfo@gmail.com" />
+		<parameter name="fcpassword" value="Welcome@1" />
+		<parameter name="Row" value="2" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.TestSignIn" />
+		</classes>
+	</test> 
+	
+	<test name="Test verify tracking status of order id's">
+		<parameter name="Row" value="4" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.manageorders.TestTrackingStatus" />
+			<class name="com.qualitesoft.freightclub.testscripts.TestLogOff" />
+		</classes>
+	</test>
+	
+</suite>	

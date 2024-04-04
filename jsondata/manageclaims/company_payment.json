@@ -1,0 +1,7 @@
+{
+	"paymeneType": "Company Payment Details",
+	"paymentMethod": "ACH/Wire",
+	"companyPayoutAmount": "800.00",
+	"claimStatus": "Initiated",
+	"internalStatus": ""
+}

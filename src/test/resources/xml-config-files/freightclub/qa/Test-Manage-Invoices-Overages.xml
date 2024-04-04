@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Overage Bulk Order Suite">
+
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="com.qualitesoft.core.CustomTestListener" />
+	</listeners>
+
+	<parameter name="project" value="FreightClub" />
+	<parameter name="browser" value="chrome" />
+	<parameter name="env" value="qa" />
+	<parameter name="URL" value="https://qa.freightclub.com/" />
+	<parameter name="retryCount" value="1" />
+	
+	<parameter name="testData" value="testdata\FCfiles\qa\Overages\SecondaryInvoiceTemplate.xlsx" />
+	
+	<!-- **********************************Manage Invoice And Overage Tests****************************************** -->
+	<test name="Test Quick Quote">
+		<parameter name="fcusername" value="test.quickquote@mailinator.com" />
+		<parameter name="fcpassword" value="Automation@123" />
+		<parameter name="testData" value="testdata\FCfiles\qa\ManageClaims\ManageClaims.xlsx" />
+		<parameter name="Row" value="2" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.TestSignIn" />
+			<class name="com.qualitesoft.freightclub.testscripts.quickquote.TestQuickQuoteStg" />
+			<class name="com.qualitesoft.freightclub.testscripts.TestLogOff" />
+		</classes>
+	</test>
+	
+	<test name="Test - valid - admin is able to import secondary invoices">
+		<parameter name="fcusername" value="info@freightclub.com" />
+		<parameter name="fcpassword" value="Welcome@2" />
+		<parameter name="Row" value="2" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.TestSignIn" />
+			<class
+				name="com.qualitesoft.freightclub.testscripts.manageinvoices.TestImportSecondaries" />
+		</classes>
+	</test>
+
+	<test name="Test - valid - admin is able to view secondary invoices detail">
+		<parameter name="userType" value="Admin"></parameter>
+		<parameter name="Row" value="2" />
+		<classes>
+			<class
+				name="com.qualitesoft.freightclub.testscripts.manageinvoices.TestViewSecondaryInvoice" />
+		</classes>
+	</test>  
+
+	<test name="Test - valid - admin is able to edit secondary invoices">
+		<parameter name="userType" value="Admin"></parameter>
+		<parameter name="Row" value="2" />
+		<classes>
+			<class
+				name="com.qualitesoft.freightclub.testscripts.manageinvoices.TestEditSecondaryInvoice" />
+			<class name="com.qualitesoft.freightclub.testscripts.TestLogOff" />
+		</classes>
+	</test>
+
+	<test name="Test - valid - user is able to view secondary invoice detail">
+		<parameter name="fcusername" value="test.quickquote@mailinator.com" />
+		<parameter name="fcpassword" value="Automation@123" />
+		<parameter name="userType" value="User"></parameter>
+		<parameter name="Row" value="2" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.TestSignIn" />
+			<class
+				name="com.qualitesoft.freightclub.testscripts.manageinvoices.TestViewSecondaryInvoice" />
+		</classes>
+	</test>
+
+	<test name="Test - valid - user is able to raise dispute">
+		<parameter name="userType" value="User"></parameter>
+		<parameter name="Row" value="2" />
+		<classes>
+			<class
+				name="com.qualitesoft.freightclub.testscripts.manageinvoices.TestRaiseDispute" />
+			<class name="com.qualitesoft.freightclub.testscripts.TestLogOff" />
+		</classes>
+	</test>
+
+	<test name="Test - valid - admin is able to view overage detail">
+		<parameter name="fcusername" value="info@freightclub.com" />
+		<parameter name="fcpassword" value="Welcome@2" />
+		<parameter name="userType" value="Admin" />
+		<parameter name="Row" value="2" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.TestSignIn" />
+			<class
+				name="com.qualitesoft.freightclub.testscripts.manageoverage.TestViewOverageDetails" />
+		</classes>
+	</test>
+
+	<test name="Test - valid - admin is able to edit overage detail">
+		<parameter name="fcusername" value="info@freightclub.com" />
+		<parameter name="fcpassword" value="Welcome@2" />
+		<parameter name="userType" value="Admin"></parameter>
+		<parameter name="Row" value="2" />
+		<classes>
+			<class
+				name="com.qualitesoft.freightclub.testscripts.manageoverage.TestEditOverageDetails" />
+			<class name="com.qualitesoft.freightclub.testscripts.TestLogOff" />
+		</classes>
+	</test>
+
+	<test name="Test - valid - user is able to view overage detail">
+		<parameter name="fcusername" value="test.quickquote@mailinator.com" />
+		<parameter name="fcpassword" value="Automation@123" />
+		<parameter name="userType" value="User"></parameter>
+		<parameter name="Row" value="2" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.TestSignIn" />
+			<class
+				name="com.qualitesoft.freightclub.testscripts.manageoverage.TestViewOverageDetails" />
+		</classes>
+	</test>
+
+	<test name="Test - valid - user is able to edit overage detail">
+		<parameter name="userType" value="User" />
+		<parameter name="Row" value="2" />
+		<classes>
+			<class
+				name="com.qualitesoft.freightclub.testscripts.manageoverage.TestEditOverageDetails" />
+			<class name="com.qualitesoft.freightclub.testscripts.TestLogOff" />
+		</classes>
+	</test> 
+
+	<test
+		name="Test - valid - admin is able to change sent to carrier overage status">
+		<parameter name="fcusername" value="info@freightclub.com" />
+		<parameter name="fcpassword" value="Welcome@2" />
+		<parameter name="userType" value="Admin"></parameter>
+		<parameter name="Row" value="2" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.TestSignIn" />
+			<class
+				name="com.qualitesoft.freightclub.testscripts.manageoverage.TestSentToCarrierOverageStatus" />
+		</classes>
+	</test>   
+	
+	<!-- <test name="Test verify that customer will get the email after clicking selecting Sent to Carrier status">
+		<parameter name="testData" value="testdata\FCfiles\qa\Overages\ManageInvoiceTestData.xlsx" />
+		<parameter name="fcusername" value="test.automation@mailinator.com" />
+		<parameter name="Row" value="2" />
+		<parameter name="notificationType" value="Sent To Carrier" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.EmailVerification" /> 
+		</classes>
+	</test>  -->
+	
+	<test name="Test - valid - admin is able to change completed overage statuses">
+		<parameter name="userType" value="Admin"></parameter>
+		<parameter name="Row" value="2" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.manageoverage.TestCompletedOverageStatus" />
+			<class
+				name="com.qualitesoft.freightclub.testscripts.TestLogOff" />
+		</classes>
+	</test>
+	
+</suite>	

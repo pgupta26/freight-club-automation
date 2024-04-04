@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Manage Product Billing Suite">
+
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="com.qualitesoft.core.CustomTestListener" />
+	</listeners>
+
+	<parameter name="project" value="FreightClub_stg" />
+	<parameter name="browser" value="chrome" />
+	<parameter name="env" value="stg" />
+	<parameter name="URL" value="https://stg.freightclub.com/" />  
+	<parameter name="retryCount" value="1" />
+	
+	<parameter name="testData" value="testdata/FCfiles/stg/ManageBilling/QuickQuoteTestData.xlsx" />
+	
+	<test name="TEST DISABLE ALL CARRIERS">
+		<parameter name="fcusername" value="freightclubinfo@gmail.com" />
+		<parameter name="fcpassword" value="Welcome@1" />
+		<parameter name="searchUser" value="qaprod7oct21@mailinator.com"/>
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.TestSignIn" />
+			<class name="com.qualitesoft.freightclub.testscripts.manageprofiles.TestUserIsAbleToSearchProfile" />
+			<class name="com.qualitesoft.freightclub.testscripts.manageprofiles.TestDisableAllCarriers" />
+			<class name="com.qualitesoft.freightclub.testscripts.manageprofiles.TestEnableCarrier" />
+		</classes>
+	</test>
+	
+	<test name="TEST ENABLE CARRIER DETAILS OPTION">
+	 	<parameter name="CarrierName" value="Ceva" />
+		<parameter name="CarrierDetailsOptions" value="Residential Pickup Supported,Loose carton accepted,Send Inside Delivery,Residential Delivery Supported" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.managecarriers.TestEnableCarrierDetailsOptions" />
+			<class name="com.qualitesoft.freightclub.testscripts.TestLogOff" />
+		</classes>
+	</test>
+	
+	<!-- *************************** Manage Products ********************************** -->
+	
+	<test name="TEST CREATE PRODUCT - NO-PALLETIZED - SINGLE CARTON">
+		<parameter name="fcusername" value="qaprod7oct21@mailinator.com" />
+		<parameter name="fcpassword" value="@Test123" />
+		<parameter name="testData" value="testdata/FCfiles/stg/ManageProducts/ManageProducts.xlsx" />
+		<parameter name="Row" value="2" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.TestSignIn" />
+			<class name="com.qualitesoft.freightclub.testscripts.manageproducts.TestCreateProduct" />
+		</classes>
+	</test> 
+	
+	<test name="TEST CREATE PRODUCT - PALLETIZED - SINGLE CARTON">
+		<parameter name="testData" value="testdata/FCfiles/stg/ManageProducts/ManageProducts.xlsx" />
+		<parameter name="Row" value="4" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.manageproducts.TestCreateProduct" />
+		</classes>
+	</test>
+	
+	<test name="TEST CREATE PRODUCT - CUSTOM PALLET - SINGLE CARTON">
+		<parameter name="testData" value="testdata/FCfiles/stg/ManageProducts/ManageProducts.xlsx" />
+		<parameter name="Row" value="6" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.manageproducts.TestCreateProduct" />
+		</classes>
+	</test> 
+	
+	<test name="TEST CREATE PRODUCT - CUSTOM PALLET - MULTIPLE CARTON">
+		<parameter name="testData" value="testdata/FCfiles/stg/ManageProducts/ManageProducts.xlsx" />
+		<parameter name="Row" value="7" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.manageproducts.TestCreateProduct" />
+		</classes>
+	</test> 
+	
+	<test name="TEST EDIT PRODUCT">
+		<parameter name="testData" value="testdata/FCfiles/stg/ManageProducts/ManageProducts.xlsx" />
+		<parameter name="Row" value="2" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.manageproducts.TestSearchProduct" />
+			<class name="com.qualitesoft.freightclub.testscripts.manageproducts.TestViewEditProduct" />
+		</classes>
+	</test> 
+	
+	<test name="TEST DELETE PRODUCT">
+		<parameter name="testData" value="testdata/FCfiles/stg/ManageProducts/ManageProducts.xlsx" />
+		<parameter name="Row" value="2" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.manageproducts.TestDeleteProduct" />
+		</classes>
+	</test>
+	
+	<test name="TEST EXPORT PRODUCTS IN EXCEL">
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.manageproducts.TestExportProductsInExcel" />
+		</classes>
+	</test>
+	
+	<test name="TEST USER IS ABLE TO DOWNLOAD PRODUCT TEMPLATE">
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.manageproducts.TestDownloadProductTemplate" />
+		</classes>
+	</test>
+	
+	<test name="TEST UPLOAD PRODUCTS">
+		<parameter name="testData" value="testdata/FCfiles/stg/ManageProducts/Import_PIDs_Template_V7.xlsM" />
+		<parameter name="Row" value="2" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.manageproducts.TestUploadProducts" />
+			<class name="com.qualitesoft.freightclub.testscripts.TestLogOff" />
+		</classes>
+	</test>
+	
+	<!-- ******************************** Manage Billing Tests ***************************************** -->
+
+	<test name="Test Enable Carriers">
+		<parameter name="fcusername" value="info@freightclub.com" />
+		<parameter name="fcpassword" value="Welcome@2" />
+		<parameter name="searchUser" value="qaprod7oct21@mailinator.com"/>
+		<parameter name="testData" value="testdata/FCfiles/stg/ManageProfile.xlsx" />
+		<parameter name="Row" value="2" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.TestSignIn" />
+			<class name="com.qualitesoft.freightclub.testscripts.manageprofiles.TestUserIsAbleToSearchProfile" />
+			<class name="com.qualitesoft.freightclub.testscripts.manageprofiles.TestEnableCarrier" />
+		</classes>
+	</test>
+	
+	<test name="TEST ENABLE LOOSE CARTON FOR BTX Global Logistics,Ceva,FC Test Carrier">
+	 	<parameter name="CarrierName" value="BTX Global Logistics,Ceva,FC Test Carrier" />
+		<parameter name="CarrierDetailsOptions" value="Loose carton accepted" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.managecarriers.TestEnableCarrierDetailsOptions" />
+			<class name="com.qualitesoft.freightclub.testscripts.TestLogOff" />
+		</classes>
+	</test> 
+	
+	 <test name="Test verify book order - LTL with pallet and Non-Palletized">
+	 	<parameter name="fcusername" value="qaprod7oct21@mailinator.com" />
+		<parameter name="fcpassword" value="@Test123" />
+		<parameter name="Row" value="2" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.TestSignIn" />
+			<class name="com.qualitesoft.freightclub.testscripts.quickquote.TestQuickQuote" />	
+		</classes>
+	</test>
+	
+	<test name="Test create generic pallet with cartoon count">
+		<parameter name="Row" value="3" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.quickquote.TestQuickQuote" />
+			<class name="com.qualitesoft.freightclub.testscripts.TestLogOff" />
+		</classes>
+	</test>
+	
+	<test name="Test verify user is able to add bills">
+		<parameter name="fcusername" value="info@freightclub.com" />
+		<parameter name="fcpassword" value="Welcome@2" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.TestSignIn" />
+			<class name="com.qualitesoft.freightclub.testscripts.managebilling.TestAddBill" />
+		</classes>
+	</test>
+
+	<test name="Test verify user is able to upload the bill">
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.managebilling.TestAddBillUsingFile" />
+			<class name="com.qualitesoft.freightclub.testscripts.managebilling.TestViewBill"></class>
+		</classes>
+	</test>
+
+	<test name="Test verify user is able to delete bills">
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.managebilling.TestDeleteBill"></class>
+		</classes>
+	</test>
+
+	<test name="Test verify details on order detail page">
+		<classes>
+			<class
+				name="com.qualitesoft.freightclub.testscripts.managebilling.TestBillsDetails"></class>
+		</classes>
+	</test>
+	
+	<test name="TEST EXPORT AND PAGINATION FOR MANAGE BILLING">
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.managebilling.TestExportBills" />
+			<class name="com.qualitesoft.freightclub.testscripts.managebilling.TestPagination" />
+			<class name="com.qualitesoft.freightclub.testscripts.TestLogOff" />
+		</classes>
+	</test>
+</suite>	

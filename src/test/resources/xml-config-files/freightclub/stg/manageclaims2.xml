@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Manage Claims Suite2">
+
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="com.qualitesoft.core.CustomTestListener" />
+	</listeners>
+
+	<parameter name="project" value="FreightClub_stg" />
+	<parameter name="browser" value="chrome" />
+	<parameter name="env" value="stg" />
+	<parameter name="URL" value="https://stg.freightclub.com/" />
+	<parameter name="retryCount" value="0" />
+	
+	<parameter name="testData" value="testdata\FCfiles\stg\ManageClaims\ManageClaims.xlsx" />
+	
+	<!-- ***********************LTL Order With Insurance Claim Type Damage************************ -->	
+	
+	<test name="Test Initiate Claim - LTL - With Insurance - Claim Type - Damage">
+		<parameter name="fcusername" value="test20may21@mailinator.com" />
+		<parameter name="fcpassword" value="@Test123" />
+		<parameter name="Row" value="2" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.TestSignIn" />
+			<class name="com.qualitesoft.freightclub.testscripts.quickquote.TestQuickQuoteStg" />
+			<class name="com.qualitesoft.freightclub.testscripts.manageclaims.TestInitiateClaim" />
+			<class name="com.qualitesoft.freightclub.testscripts.TestLogOff" />
+		</classes>
+	</test>
+	
+	<test name="Test Create Carrier Payment As Admin">
+		<parameter name="fcusername" value="info@freightclub.com" />
+		<parameter name="fcpassword" value="Welcome@2" />
+		<parameter name="dataFile" value="manageclaims/carrier_payment.json"/>
+		<parameter name="Row" value="2" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.TestSignIn" />
+			<class name="com.qualitesoft.freightclub.testscripts.manageclaims.TestCreateCarrierPayment" />
+			<class name="com.qualitesoft.freightclub.testscripts.TestLogOff" />
+		</classes>
+	</test> 
+
+	<test name="Test Validate Carrier Payment As User">
+		<parameter name="fcusername" value="test20may21@mailinator.com" />
+		<parameter name="fcpassword" value="@Test123" />
+		<parameter name="dataFile" value="manageclaims/carrier_payment.json"/>
+		<parameter name="Row" value="2" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.TestSignIn" />
+			<class name="com.qualitesoft.freightclub.testscripts.manageclaims.TestValidateClaimPaymentAsUser" />
+			<class name="com.qualitesoft.freightclub.testscripts.TestLogOff" />
+		</classes>
+	</test>
+	
+	<test name="Test Import Carrier Claim Payment As Admin">
+		<parameter name="fcusername" value="info@freightclub.com" />
+		<parameter name="fcpassword" value="Welcome@2" />
+		<parameter name="Row" value="2" />
+		<parameter name="keyword" value="Carrier_Payment_Template.xlsx" />
+		<parameter name="dataFile" value="manageclaims/carrier_payment.json"/>
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.TestSignIn" />
+			<class name="com.qualitesoft.freightclub.testscripts.manageclaims.TestImportCarrierClaimPayment" />
+		</classes>
+	</test>
+	
+	<test name="Test Reverse Carrier Payment As Admin">
+		<parameter name="fcusername" value="test20may21@mailinator.com" />
+		<parameter name="fcpassword" value="@Test123" />
+		<parameter name="Row" value="2" />
+		<parameter name="keyword" value="Carrier_Payment_Template.xlsx" />
+		<parameter name="dataFile" value="manageclaims/carrier_payment.json"/>
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.manageclaims.TestReversePayment" />
+			<class name="com.qualitesoft.freightclub.testscripts.TestLogOff" />
+		</classes>
+	</test>  
+		
+	<!-- ***********************LTL Order Without Insurance Claim Type Loss************************ -->
+	
+	<test name="Test Initiate Claim - LTL - Without Insurance - Claim Type - Loss">
+		<parameter name="fcusername" value="test20may21@mailinator.com" />
+		<parameter name="fcpassword" value="@Test123" />
+		<parameter name="Row" value="3" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.TestSignIn" />
+			<class name="com.qualitesoft.freightclub.testscripts.quickquote.TestQuickQuoteStg" />
+			<class name="com.qualitesoft.freightclub.testscripts.manageclaims.TestInitiateClaim" />
+			<class name="com.qualitesoft.freightclub.testscripts.TestLogOff" />
+		</classes>
+	</test>
+	
+	<test name="Test Create Customer Payment As Admin">
+		<parameter name="fcusername" value="info@freightclub.com" />
+		<parameter name="fcpassword" value="Welcome@2" />
+		<parameter name="dataFile" value="manageclaims/company_payment.json"/>
+		<parameter name="Row" value="3" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.TestSignIn" />
+			<class name="com.qualitesoft.freightclub.testscripts.manageclaims.TestCreateCompanyPayment" />
+			<class name="com.qualitesoft.freightclub.testscripts.TestLogOff" />
+		</classes>
+	</test>
+
+	<test name="Test Validate Customer Payment As User">
+		<parameter name="fcusername" value="test20may21@mailinator.com" />
+		<parameter name="fcpassword" value="@Test123" />
+		<parameter name="dataFile" value="manageclaims/company_payment.json"/>
+		<parameter name="Row" value="3" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.TestSignIn" />
+			<class name="com.qualitesoft.freightclub.testscripts.manageclaims.TestValidateClaimPaymentAsUser" />
+			<class name="com.qualitesoft.freightclub.testscripts.TestLogOff" />
+		</classes>
+	</test> 
+	
+	<test name="Test Import Customer Claim Payment As Admin">
+		<parameter name="fcusername" value="info@freightclub.com" />
+		<parameter name="fcpassword" value="Welcome@2" />
+		<parameter name="Row" value="3" />
+		<parameter name="keyword" value="Company_Payment_Template.xlsx" />
+		<parameter name="dataFile" value="manageclaims/company_payment.json"/>
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.TestSignIn" />
+			<class name="com.qualitesoft.freightclub.testscripts.manageclaims.TestImportCarrierClaimPayment" />
+		</classes>
+	</test>
+	
+	<test name="Test Reverse Company Payment As Admin">
+		<parameter name="fcusername" value="test20may21@mailinator.com" />
+		<parameter name="fcpassword" value="@Test123" />
+		<parameter name="Row" value="3" />
+		<parameter name="keyword" value="Company_Payment_Template.xlsx" />
+		<parameter name="dataFile" value="manageclaims/company_payment.json"/>
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.manageclaims.TestReversePayment" />
+			<class name="com.qualitesoft.freightclub.testscripts.TestLogOff" />
+		</classes>
+	</test>	
+	
+	<test name="Test Validate Admin Tab as Admin">
+		<parameter name="fcusername" value="info@freightclub.com" />
+		<parameter name="fcpassword" value="Welcome@2" />
+		<parameter name="Row" value="3" />
+		<classes>
+		<class name="com.qualitesoft.freightclub.testscripts.TestSignIn" />
+			<class name="com.qualitesoft.freightclub.testscripts.manageclaims.TestValidateAdminTabData" />
+			<class name="com.qualitesoft.freightclub.testscripts.TestLogOff" />
+		</classes>
+	</test>	
+</suite>	

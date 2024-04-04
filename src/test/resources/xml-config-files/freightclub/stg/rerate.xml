@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Re-Rate Suite">
+
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="com.qualitesoft.core.CustomTestListener" />
+	</listeners>
+
+	<parameter name="project" value="FreightClub_stg" />
+	<parameter name="browser" value="chrome" />
+	<parameter name="env" value="stg" />
+	<parameter name="URL" value="https://stg.freightclub.com/" />  
+	<parameter name="retryCount" value="1" />
+	
+	<parameter name="testData" value="testdata/FCfiles/stg/QuickQuote/QuickQuoteTestData.xlsx" />
+	
+	<!-- *************************** Quick Quote ********************************** -->
+	<test name="Test verify Re-Rate functionality">
+		<parameter name="fcusername" value="test20may21@mailinator.com" />
+		<parameter name="fcpassword" value="@Test123" />
+		<parameter name="Row" value="14" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.TestSignIn" />
+			<class name="com.qualitesoft.freightclub.testscripts.quickquote.TestRerateForNewWeight" />
+		</classes>
+	</test>	
+</suite>	

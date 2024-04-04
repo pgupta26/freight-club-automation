@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Manage Product Billing Suite">
+
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="com.qualitesoft.core.CustomTestListener" />
+	</listeners>
+
+	<parameter name="project" value="FreightClub" />
+	<parameter name="browser" value="chrome" />
+	<parameter name="env" value="qa" />
+	<parameter name="URL" value="https://qa.freightclub.com/" />  
+	<parameter name="retryCount" value="1" />
+	
+	<!-- *************************** Manage Products ********************************** -->
+	
+	<test name="TEST CREATE PRODUCT - NO-PALLETIZED - SINGLE CARTON">
+		<parameter name="fcusername" value="test.manageproducts@mailinator.com" />
+		<parameter name="fcpassword" value="Automation@123" />
+		<parameter name="testData" value="testdata/FCfiles/qa/ManageProducts/ManageProducts.xlsx" />
+		<parameter name="Row" value="2" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.TestSignIn" />
+			<class name="com.qualitesoft.freightclub.testscripts.manageproducts.TestCreateProduct" />
+		</classes>
+	</test> 
+	
+	<test name="TEST CREATE PRODUCT - PALLETIZED - SINGLE CARTON">
+		<parameter name="testData" value="testdata/FCfiles/qa/ManageProducts/ManageProducts.xlsx" />
+		<parameter name="Row" value="4" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.manageproducts.TestCreateProduct" />
+		</classes>
+	</test>
+	
+	<test name="TEST CREATE PRODUCT - CUSTOM PALLET - SINGLE CARTON">
+		<parameter name="testData" value="testdata/FCfiles/qa/ManageProducts/ManageProducts.xlsx" />
+		<parameter name="Row" value="6" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.manageproducts.TestCreateProduct" />
+		</classes>
+	</test> 
+	
+	<test name="TEST CREATE PRODUCT - CUSTOM PALLET - MULTIPLE CARTON">
+		<parameter name="testData" value="testdata/FCfiles/qa/ManageProducts/ManageProducts.xlsx" />
+		<parameter name="Row" value="7" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.manageproducts.TestCreateProduct" />
+		</classes>
+	</test> 
+	
+	<test name="TEST EDIT PRODUCT">
+		<parameter name="testData" value="testdata/FCfiles/qa/ManageProducts/ManageProducts.xlsx" />
+		<parameter name="Row" value="2" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.manageproducts.TestSearchProduct" />
+			<class name="com.qualitesoft.freightclub.testscripts.manageproducts.TestViewEditProduct" />
+		</classes>
+	</test> 
+	
+	<test name="TEST DELETE PRODUCT">
+		<parameter name="testData" value="testdata/FCfiles/qa/ManageProducts/ManageProducts.xlsx" />
+		<parameter name="Row" value="2" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.manageproducts.TestDeleteProduct" />
+		</classes>
+	</test>
+	
+	<test name="TEST EXPORT PRODUCTS IN EXCEL">
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.manageproducts.TestExportProductsInExcel" />
+		</classes>
+	</test>
+	
+	<test name="TEST USER IS ABLE TO DOWNLOAD PRODUCT TEMPLATE">
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.manageproducts.TestDownloadProductTemplate" />
+		</classes>
+	</test> 
+	
+	<test name="TEST UPLOAD PRODUCTS">
+		<parameter name="testData" value="testdata/FCfiles/qa/ManageProducts/Import_PIDs_Template_V7-R18.xlsm" />
+		<parameter name="Row" value="2" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.manageproducts.TestUploadProducts" />
+		</classes>
+	</test>
+</suite>		

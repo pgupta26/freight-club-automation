@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Public Quote Suite">
+
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="com.qualitesoft.core.CustomTestListener" />
+	</listeners>
+
+	<parameter name="project" value="FreightClub_stg" />
+	<parameter name="browser" value="chrome" />
+	<parameter name="env" value="stg" />
+	<parameter name="URL" value="https://stg.freightclub.com/" />  
+	<parameter name="retryCount" value="1" />
+	
+	<parameter name="testData" value="testdata/FCfiles/stg/SignUp.xlsx" />
+		
+	<!-- ************************************** Sign Up ****************************************************** -->
+	
+	<test name="Test New User Able To Sign Up When Account Type - Manufacturer">
+		<parameter name="loginuser" value="new" />
+		<parameter name="Row" value="2" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.signup.TestLaunchQuickQuote" />
+			<class name="com.qualitesoft.freightclub.testscripts.signup.TestEnterShipmentInformation"/>
+			<class name="com.qualitesoft.freightclub.testscripts.signup.TestCreateAccount" />
+			<class name="com.qualitesoft.freightclub.testscripts.signup.TestShipmentInfo" />
+			<class name="com.qualitesoft.freightclub.testscripts.signup.TestPayment" />
+			<class name="com.qualitesoft.freightclub.testscripts.TestLogOff" />
+		</classes>
+	</test> 
+	
+	<test name="Test New User Able To Sign Up When Account Type - Retailer">
+		<parameter name="loginuser" value="new" />
+		<parameter name="Row" value="3" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.signup.TestLaunchQuickQuote" />
+			<class name="com.qualitesoft.freightclub.testscripts.signup.TestEnterShipmentInformation"/>
+			<class name="com.qualitesoft.freightclub.testscripts.signup.TestCreateAccount" />
+			<class name="com.qualitesoft.freightclub.testscripts.signup.TestShipmentInfo" />
+			<class name="com.qualitesoft.freightclub.testscripts.signup.TestPayment" />
+			<class name="com.qualitesoft.freightclub.testscripts.TestLogOff" />
+		</classes>
+	</test>
+	
+	<test name="Test New User Able To Sign Up When Account Type - Carrier">
+		<parameter name="loginuser" value="new" />
+		<parameter name="Row" value="4" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.signup.TestLaunchQuickQuote" />
+			<class name="com.qualitesoft.freightclub.testscripts.signup.TestEnterShipmentInformation"/>
+			<class name="com.qualitesoft.freightclub.testscripts.signup.TestCreateAccount" />
+			<class name="com.qualitesoft.freightclub.testscripts.signup.TestShipmentInfo" />
+			<class name="com.qualitesoft.freightclub.testscripts.signup.TestPayment" />
+			<class name="com.qualitesoft.freightclub.testscripts.TestLogOff" />
+		</classes>
+	</test>    
+	
+	<test name="Test New User Able To Sign Up When Account Type - Designer">
+		<parameter name="loginuser" value="new" />
+		<parameter name="Row" value="5" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.signup.TestLaunchQuickQuote" />
+			<class name="com.qualitesoft.freightclub.testscripts.signup.TestEnterShipmentInformation"/>
+			<class name="com.qualitesoft.freightclub.testscripts.signup.TestCreateAccount" />
+			<class name="com.qualitesoft.freightclub.testscripts.signup.TestShipmentInfo" />
+			<class name="com.qualitesoft.freightclub.testscripts.signup.TestPayment" />
+			<class name="com.qualitesoft.freightclub.testscripts.TestLogOff" />
+		</classes>
+	</test> 
+	
+	<test name="Test New User Able To Sign Up When Account Type - Individual Consumer">
+		<parameter name="loginuser" value="new" />
+		<parameter name="Row" value="6" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.signup.TestLaunchQuickQuote" />
+			<class name="com.qualitesoft.freightclub.testscripts.signup.TestEnterShipmentInformation"/>
+			<class name="com.qualitesoft.freightclub.testscripts.signup.TestCreateAccount" />
+			<class name="com.qualitesoft.freightclub.testscripts.signup.TestShipmentInfo" />
+			<class name="com.qualitesoft.freightclub.testscripts.signup.TestPayment" />
+			<class name="com.qualitesoft.freightclub.testscripts.TestLogOff" />
+		</classes>
+	</test>
+	
+	<test name="Test Verify Newly Created User Profile Details">
+		<parameter name="fcusername" value="freightclubinfo@gmail.com" />
+		<parameter name="fcpassword" value="Welcome@1" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.TestSignIn" />
+			<class name="com.qualitesoft.freightclub.testscripts.manageprofiles.TestVerifyUserProfileDetail" />
+			<class name="com.qualitesoft.freightclub.testscripts.TestLogOff" />
+		</classes>
+	</test>
+</suite>	

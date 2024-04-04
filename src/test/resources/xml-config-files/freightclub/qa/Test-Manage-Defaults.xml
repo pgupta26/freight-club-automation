@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Manage Defaults Suite">
+
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="com.qualitesoft.core.CustomTestListener" />
+	</listeners>
+
+	<parameter name="project" value="FreightClub" />
+	<parameter name="browser" value="chrome" />
+	<parameter name="env" value="qa" />
+	<parameter name="URL" value="https://qa.freightclub.com/" />  
+	<parameter name="retryCount" value="1" />
+	
+	<parameter name="testData" value="testdata/FCfiles/qa/QuickQuote/QuickQuoteTestData.xlsx" />
+	
+	<test name="TEST Default Fields Value For Manage Defaults Screen">
+		<parameter name="fcusername" value="test.quickquote@mailinator.com" />
+		<parameter name="fcpassword" value="Automation@123" />
+		<parameter name="dataFile" value="ManageDefaults/DefaultValues.json"/>
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.TestSignIn" />
+			<class name="com.qualitesoft.freightclub.testscripts.managedefaults.TestDefaultFieldValuesAtManageDefaultsScreen" />
+		</classes>
+	</test>
+	
+	<test name="TEST Validate Default Values Of Manage Defaults Screen">
+		<parameter name="Row" value="2" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.managedefaults.TestValidationDefaultFieldsValuesOfManageDefaultScreen" />
+		</classes>
+	</test>
+	
+</suite>	

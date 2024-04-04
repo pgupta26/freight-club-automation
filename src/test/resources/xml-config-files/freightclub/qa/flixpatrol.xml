@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Flix Patrol Suite">
+
+	<parameter name="project" value="Flix Patrol" />
+	<parameter name="browser" value="chrome" />
+	<parameter name="URL" value="https://flixpatrol.com/" />	
+	
+	<!--<test name="Test Get Most Popular Titles">
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.scrapping.GetPopularTitles" />
+		</classes>
+	</test>
+
+	<test name="Test Get Most Popular Movies">
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.scrapping.GetPopularMovies" />
+		</classes>
+	</test>-->
+
+	<test name="Test Get Most Popular Movies">
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.scrapping.GetPopularTVShows" />
+		</classes>
+	</test>
+	
+</suite>

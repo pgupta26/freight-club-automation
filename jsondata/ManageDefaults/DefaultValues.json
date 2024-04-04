@@ -1,0 +1,16 @@
+{
+	"defaultLTLServiceLevel": "",
+	"defaultPickupLocationType": "Commercial",
+	"defaultParcelPickupLocation": "",
+	"defaultLTLPickupLocation": "",
+	"defaultDropoffLocationType": "Residential",
+	"defaultDropoffLocation": "",
+	"defaultPickupWindow": "",
+	"defaultSpecialInstructions": "",
+	"defaultLandingPage": "Welcome Page",
+	"defaultLabelFileName": "Freight Club Order ID",
+	"dontShowServiceLabelCheckbox": false,
+	"includeCustomerPO#Checkbox": false,
+	"preferredTrackingView": "Freight Club",
+	"contactPhoneNumberType": "Carrier's Customer Service"
+}

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Quick Quote Suite">
+
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="com.qualitesoft.core.CustomTestListener" />
+	</listeners>
+
+	<parameter name="project" value="FreightClub" />
+	<parameter name="browser" value="chrome" />
+	<parameter name="env" value="qa" />
+	<parameter name="URL" value="https://qa.freightclub.com/" />  
+	<parameter name="retryCount" value="1" />
+	
+	<parameter name="testData" value="testdata/FCfiles/qa/QuickQuote/QA_517.xlsx" />
+	
+	<test name="TEST DISABLE ALL CARRIERS">
+		<parameter name="fcusername" value="info@freightclub.com" />
+		<parameter name="fcpassword" value="Welcome@2" />
+		<parameter name="searchUser" value="test.quickquote@mailinator.com"/>
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.TestSignIn" />
+			<class name="com.qualitesoft.freightclub.testscripts.manageprofiles.TestUserIsAbleToSearchProfile" />
+			<class name="com.qualitesoft.freightclub.testscripts.manageprofiles.TestDisableAllCarriers" />
+		</classes>
+	</test>
+	
+	<test name="Test Enable Carriers">
+		<parameter name="testData" value="testdata/FCfiles/qa/ManageProfile.xlsx" />
+		<parameter name="Row" value="2" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.manageprofiles.TestEnableCarrier" />
+		</classes>
+	</test>
+	
+	<test name="TEST ENABLE CARRIER DETAILS OPTION">
+	 	<parameter name="CarrierName" value="ABF Freight,Ceva,FC Test Carrier,UPS,FragilePAK" />
+		<parameter name="CarrierDetailsOptions" value="Residential Pickup Supported,Loose carton accepted,Send Inside Delivery,Residential Delivery Supported" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.managecarriers.TestEnableCarrierDetailsOptions" />
+			<class name="com.qualitesoft.freightclub.testscripts.TestLogOff" />
+		</classes>
+	</test>
+	
+	<!-- ************************************** QA - 517 Tests ****************************************************** -->
+	
+	<test name="Test Basic Threshold Not Visible When Residential to Commercial - ABF Freight">
+		<parameter name="fcusername" value="test.quickquote@mailinator.com" />
+		<parameter name="fcpassword" value="Automation@123" />
+		<parameter name="Row" value="2" />
+		<parameter name="CarrierName" value="ABF Freight" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.TestSignIn" />
+			<class name="com.qualitesoft.freightclub.testscripts.quickquote.TestEnterShipmentInformation" />
+			<class name="com.qualitesoft.freightclub.testscripts.quickquote.TestBasicThresholdAtCarrierPage" />
+			<class name="com.qualitesoft.freightclub.testscripts.quickquote.TestEnterShipmentCompletionDetail" />
+			<class name="com.qualitesoft.freightclub.testscripts.quickquote.TestBasicThresholdAtReviewOrderPage" />
+			<class name="com.qualitesoft.freightclub.testscripts.manageorders.TestOpenManageOrdersAndSearchOrderId" />
+			<class name="com.qualitesoft.freightclub.testscripts.manageorders.TestBOL" />
+			<class name="com.qualitesoft.freightclub.testscripts.manageorders.TestBasicThresholdAtOrderDetails" />	
+		</classes>
+	</test>
+
+	<test name="Test Basic Threshold Not Visible When Residential to Commercial - Ceva">
+		<parameter name="Row" value="3" />
+		<parameter name="CarrierName" value="Ceva" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.quickquote.TestEnterShipmentInformation" />
+			<class name="com.qualitesoft.freightclub.testscripts.quickquote.TestBasicThresholdAtCarrierPage" />
+			<class name="com.qualitesoft.freightclub.testscripts.quickquote.TestEnterShipmentCompletionDetail" />
+			<class name="com.qualitesoft.freightclub.testscripts.quickquote.TestBasicThresholdAtReviewOrderPage" />
+			<class name="com.qualitesoft.freightclub.testscripts.manageorders.TestOpenManageOrdersAndSearchOrderId" />
+			<class name="com.qualitesoft.freightclub.testscripts.manageorders.TestBOL" />
+			<class name="com.qualitesoft.freightclub.testscripts.manageorders.TestBasicThresholdAtOrderDetails" />
+		</classes>
+	</test>
+
+	<test name="Test Basic Threshold Visible When Commercial to Residential - ABF Freight">
+		<parameter name="CarrierName" value="ABF Freight" />
+		<parameter name="Row" value="4" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.quickquote.TestEnterShipmentInformation" />
+			<class name="com.qualitesoft.freightclub.testscripts.quickquote.TestBasicThresholdAtCarrierPage" />
+			<class name="com.qualitesoft.freightclub.testscripts.quickquote.TestEnterShipmentCompletionDetail" />
+			<class name="com.qualitesoft.freightclub.testscripts.quickquote.TestBasicThresholdAtReviewOrderPage" />
+			<class name="com.qualitesoft.freightclub.testscripts.manageorders.TestOpenManageOrdersAndSearchOrderId" />
+			<class name="com.qualitesoft.freightclub.testscripts.manageorders.TestBOL" />
+			<class name="com.qualitesoft.freightclub.testscripts.manageorders.TestBasicThresholdAtOrderDetails" />
+		</classes>
+	</test>
+
+	<test name="Test Basic Threshold Visible When Commercial to Residential - Ceva">
+		<parameter name="Row" value="5" />
+		<parameter name="CarrierName" value="Ceva" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.quickquote.TestEnterShipmentInformation" />
+			<class name="com.qualitesoft.freightclub.testscripts.quickquote.TestBasicThresholdAtCarrierPage" />
+			<class name="com.qualitesoft.freightclub.testscripts.quickquote.TestEnterShipmentCompletionDetail" />
+			<class name="com.qualitesoft.freightclub.testscripts.quickquote.TestBasicThresholdAtReviewOrderPage" />
+			<class name="com.qualitesoft.freightclub.testscripts.manageorders.TestOpenManageOrdersAndSearchOrderId" />
+			<class name="com.qualitesoft.freightclub.testscripts.manageorders.TestBOL" />
+			<class name="com.qualitesoft.freightclub.testscripts.manageorders.TestBasicThresholdAtOrderDetails" />
+		</classes>
+	</test>
+
+	<test name="Test FC Test Carrier visible When Loose Cartoon Accepted - Non-Palletized with quantity = 1">
+		<parameter name="Row" value="6" />
+		<parameter name="CarrierName" value="FC Test Carrier" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.manageproducts.TestUserIsAbleToCreateNonPalletizedSku" />
+			<class name="com.qualitesoft.freightclub.testscripts.quickquote.TestEnterShipmentInformation" />
+			<class name="com.qualitesoft.freightclub.testscripts.quickquote.TestFCTestCarriersVisible" />
+		</classes>
+	</test>
+
+	<test name="Test FC Test Carrier visible When Loose Cartoon Accepted - Palletized with quantity = 1">
+		<parameter name="Row" value="7" />
+		<parameter name="CarrierName" value="FC Test Carrier" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.quickquote.TestSelectPalletizedPackageType" />
+			<class name="com.qualitesoft.freightclub.testscripts.quickquote.TestFCTestCarriersVisible" />		
+		</classes>
+	</test>
+
+	<test name="Test FC Test Carrier visible When Loose Cartoon Accepted - Added Product with quantity = 1">
+		<parameter name="Row" value="7" />
+		<parameter name="CarrierName" value="FC Test Carrier" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.quickquote.TestSelectAddProductPackageType" />
+			<class name="com.qualitesoft.freightclub.testscripts.quickquote.TestFCTestCarriersVisible" />
+			<class name="com.qualitesoft.freightclub.testscripts.TestLogOff" />
+		</classes>
+	</test> 
+
+	<test name="Test Uncheck Loose Cartoon Accepted">
+		<parameter name="fcusername" value="info@freightclub.com" />
+		<parameter name="fcpassword" value="Welcome@2" />
+		<parameter name="CarrierName" value="FC Test Carrier" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.TestSignIn" />
+			<class name="com.qualitesoft.freightclub.testscripts.managecarriers.TestDisableLooseCartoonAccepted" />
+			<class name="com.qualitesoft.freightclub.testscripts.TestLogOff" />
+		</classes>
+	</test>
+
+	<test
+		name="Test loose carton popup visible - Non-Palletized with quantity = 11">
+		<parameter name="fcusername" value="test.quickquote@mailinator.com" />
+		<parameter name="fcpassword" value="Automation@123" />
+		<parameter name="Row" value="8" />
+		<parameter name="CarrierName" value="FC Test Carrier" />
+		<parameter name="testData" value="testdata/FCfiles/qa/QuickQuote/QA_517.xlsx" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.TestSignIn" />
+			<class name="com.qualitesoft.freightclub.testscripts.manageproducts.TestUserIsAbleToCreateNonPalletizedSku" />
+			<class name="com.qualitesoft.freightclub.testscripts.quickquote.TestEnterShipmentInformation" />
+			<class name="com.qualitesoft.freightclub.testscripts.quickquote.TestLooseCartoonPopup" />
+		</classes>
+	</test>
+
+	<test name="Test FC Test Carrier not visible - Non-Palletized with quantity = 1">
+		<parameter name="CarrierName" value="FC Test Carrier" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.quickquote.TestFCTestCarriersNotVisible" />
+		</classes>
+	</test>
+
+	<test name="Test loose carton popup visible - Added Product with quantity = 11">
+		<parameter name="Row" value="8" />
+		<parameter name="CarrierName" value="FC Test Carrier" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.quickquote.TestSelectAddProductPackageType" />
+			<class name="com.qualitesoft.freightclub.testscripts.quickquote.TestLooseCartoonPopup" />
+		</classes>
+	</test>
+
+	<test name="Test FC Test Carrier not visible - Added Product with quantity = 1">
+		<parameter name="CarrierName" value="FC Test Carrier" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.quickquote.TestFCTestCarriersNotVisible" />
+		</classes>
+	</test>
+
+	<test name="Test FC Test Carrier visible When Loose Cartoon not accepted - Palletized with quantity = 1">
+		<parameter name="Row" value="7" />
+		<parameter name="CarrierName" value="FC Test Carrier" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.quickquote.TestEnterShipmentInformation" />
+			<class name="com.qualitesoft.freightclub.testscripts.quickquote.TestFCTestCarriersVisible" />
+			<class name="com.qualitesoft.freightclub.testscripts.TestLogOff" />
+		</classes>
+	</test> 
+</suite>

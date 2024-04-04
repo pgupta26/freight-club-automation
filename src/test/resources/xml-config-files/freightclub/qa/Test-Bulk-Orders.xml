@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Overage Bulk Order Suite">
+
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="com.qualitesoft.core.CustomTestListener" />
+	</listeners>
+
+	<parameter name="project" value="FreightClub" />
+	<parameter name="browser" value="chrome" />
+	<parameter name="env" value="qa" />
+	<parameter name="URL" value="https://qa.freightclub.com/" />
+	<parameter name="retryCount" value="1" />
+	
+	<!-- ********************************** Bulk Orders Upload****************************************** -->
+	
+	<test name="Test set payment method as Credit Card">
+		<parameter name="fcusername" value="info@freightclub.com" />
+		<parameter name="fcpassword" value="Welcome@2" />
+		<parameter name="searchUser" value="test.bulkorders@mailinator.com"/>
+		<parameter name="testData" value="testdata\FCfiles\qa\BulkOrders\BulkOrdersTestData.xlsx" />
+		<parameter name="userPermissions" value="Bulk Order Upload"/>
+		<parameter name="Row" value="2" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.TestSignIn" />
+			<class name="com.qualitesoft.freightclub.testscripts.managepermissions.TestEnableUserPermissions" />
+			<class name="com.qualitesoft.freightclub.testscripts.manageprofiles.TestUserIsAbleToSearchProfile" />
+			<class name="com.qualitesoft.freightclub.testscripts.manageprofiles.TestSelectPaymentMethod" />
+			<class name="com.qualitesoft.freightclub.testscripts.manageprofiles.TestSelectAccountType" />
+			<class name="com.qualitesoft.freightclub.testscripts.manageprofiles.TestDisableAllCarriers" />
+			<class name="com.qualitesoft.freightclub.testscripts.manageprofiles.TestEnableCarrier" />
+			<class name="com.qualitesoft.freightclub.testscripts.manageprofiles.TestEnableGroundUnderUPSSetting" />
+			<class name="com.qualitesoft.freightclub.testscripts.TestLogOff" />
+		</classes>
+	</test>
+	
+	<test name="Test Upload Bulk Orders File - Credit Card">
+		<parameter name="fcusername" value="test.bulkorders@mailinator.com" />
+		<parameter name="fcpassword" value="Automation@123" />
+		<parameter name="testData" value="testdata\FCfiles\qa\BulkOrders\BulkOrdersTestData.xlsx" />
+		<parameter name="Row" value="2" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.TestSignIn" />
+			<class name="com.qualitesoft.freightclub.testscripts.bulkorders.TestUserIsAbleToUploadBulkOrderFile" />
+			<class name="com.qualitesoft.freightclub.testscripts.TestLogOff" />
+		</classes>
+	</test>
+	
+	<test name="Test set payment method as On Account">
+		<parameter name="fcusername" value="info@freightclub.com" />
+		<parameter name="fcpassword" value="Welcome@2" />
+		<parameter name="searchUser" value="test.bulkorders@mailinator.com"/>
+		<parameter name="testData" value="testdata\FCfiles\qa\BulkOrders\BulkOrdersTestData.xlsx" />
+		<parameter name="Row" value="3" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.TestSignIn" />
+			<class name="com.qualitesoft.freightclub.testscripts.manageprofiles.TestUserIsAbleToSearchProfile" />
+			<class name="com.qualitesoft.freightclub.testscripts.manageprofiles.TestSelectPaymentMethod" />
+			<class name="com.qualitesoft.freightclub.testscripts.TestLogOff" />
+		</classes>
+	</test>
+	
+	<test name="Test Upload Bulk Orders File - On Account - AutoBook">
+		<parameter name="fcusername" value="test.bulkorders@mailinator.com" />
+		<parameter name="fcpassword" value="Automation@123" />
+		<parameter name="testData" value="testdata\FCfiles\qa\BulkOrders\BulkOrdersTestData.xlsx" />
+		<parameter name="Row" value="3" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.TestSignIn" />
+			<class name="com.qualitesoft.freightclub.testscripts.bulkorders.TestUserIsAbleToUploadBulkOrderFile" />
+		</classes>
+	</test>
+	 
+	<test name="Test Bulk Order Booking - Parcel">
+		<parameter name="testData" value="testdata\FCfiles\qa\BulkOrders\BulkOrdersTestData.xlsx" />
+		<parameter name="searchUser" value="Parcel-OID532" />  <!-- This is customer PO number to book order -->
+		<parameter name="Row" value="2" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.bulkorders.TestUserIsAbleToBookOrder" />
+		</classes>
+	</test>
+	
+	<test name="Test Bulk Order Booking - LTL"> 
+		<parameter name="testData" value="testdata\FCfiles\qa\BulkOrders\BulkOrdersTestData.xlsx" /> 
+		<parameter name="searchUser" value="LTL-OID102" />  <!-- This is customer PO number to book order -->
+		<parameter name="Row" value="2" />
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.bulkorders.TestUserIsAbleToBookOrder" />
+		</classes>
+	</test>
+	
+	<test name="Test Download Bulk Order Labels And BOL">
+		<classes>
+			<class name="com.qualitesoft.freightclub.testscripts.bulkorders.TestDownloadLabelsAndBOL" />
+			<class name="com.qualitesoft.freightclub.testscripts.TestLogOff" />
+		</classes>
+	</test>
+	
+</suite>

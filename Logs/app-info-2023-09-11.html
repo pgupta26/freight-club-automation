@@ -1,0 +1,1803 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Freight Club Logs</title>
+<style type="text/css">
+<!--
+body, table {font-family:arial,sans-serif; font-size: medium
+;}th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade="noshade">
+Log session start time Mon Sep 11 21:04:25 PDT 2023<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Logger</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>3467</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.util.internal.logging.InternalLoggerFactory logger">io.netty.util.internal.logging.InternalLoggerFactory</td>
+<td title="Message">Using Log4J2 as the default logging framework</td>
+</tr>
+
+<tr>
+<td>3480</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.util.ResourceLeakDetector logger">io.netty.util.ResourceLeakDetector</td>
+<td title="Message">-Dio.netty.leakDetection.level: simple</td>
+</tr>
+
+<tr>
+<td>3481</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.util.ResourceLeakDetector logger">io.netty.util.ResourceLeakDetector</td>
+<td title="Message">-Dio.netty.leakDetection.targetRecords: 4</td>
+</tr>
+
+<tr>
+<td>3485</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.util.ResourceLeakDetectorFactory logger">io.netty.util.ResourceLeakDetectorFactory</td>
+<td title="Message">Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@3e1a3801</td>
+</tr>
+
+<tr>
+<td>3532</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.util.internal.PlatformDependent0 logger">io.netty.util.internal.PlatformDependent0</td>
+<td title="Message">-Dio.netty.noUnsafe: false</td>
+</tr>
+
+<tr>
+<td>3533</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.util.internal.PlatformDependent0 logger">io.netty.util.internal.PlatformDependent0</td>
+<td title="Message">Java version: 11</td>
+</tr>
+
+<tr>
+<td>3534</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.util.internal.PlatformDependent0 logger">io.netty.util.internal.PlatformDependent0</td>
+<td title="Message">sun.misc.Unsafe.theUnsafe: available</td>
+</tr>
+
+<tr>
+<td>3535</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.util.internal.PlatformDependent0 logger">io.netty.util.internal.PlatformDependent0</td>
+<td title="Message">sun.misc.Unsafe.copyMemory: available</td>
+</tr>
+
+<tr>
+<td>3535</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.util.internal.PlatformDependent0 logger">io.netty.util.internal.PlatformDependent0</td>
+<td title="Message">sun.misc.Unsafe.storeFence: available</td>
+</tr>
+
+<tr>
+<td>3536</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.util.internal.PlatformDependent0 logger">io.netty.util.internal.PlatformDependent0</td>
+<td title="Message">java.nio.Buffer.address: available</td>
+</tr>
+
+<tr>
+<td>3537</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.util.internal.PlatformDependent0 logger">io.netty.util.internal.PlatformDependent0</td>
+<td title="Message">direct buffer constructor: unavailable</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : small;" colspan="6">java.lang.UnsupportedOperationException: Reflective setAccessible(true) disabled
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at io.netty.util.internal.ReflectionUtil.trySetAccessible(ReflectionUtil.java:31)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at io.netty.util.internal.PlatformDependent0$5.run(PlatformDependent0.java:287)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at java.base/java.security.AccessController.doPrivileged(Native Method)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at io.netty.util.internal.PlatformDependent0.&lt;clinit&gt;(PlatformDependent0.java:281)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:294)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at io.netty.util.internal.PlatformDependent.&lt;clinit&gt;(PlatformDependent.java:88)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at io.netty.util.HashedWheelTimer.&lt;init&gt;(HashedWheelTimer.java:114)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at io.netty.util.HashedWheelTimer.&lt;init&gt;(HashedWheelTimer.java:251)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at io.netty.util.HashedWheelTimer.&lt;init&gt;(HashedWheelTimer.java:224)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at io.netty.util.HashedWheelTimer.&lt;init&gt;(HashedWheelTimer.java:203)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.asynchttpclient.DefaultAsyncHttpClient.newNettyTimer(DefaultAsyncHttpClient.java:111)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.asynchttpclient.DefaultAsyncHttpClient.&lt;init&gt;(DefaultAsyncHttpClient.java:90)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.asynchttpclient.Dsl.asyncHttpClient(Dsl.java:32)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.openqa.selenium.remote.http.netty.NettyClient.createHttpClient(NettyClient.java:93)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.openqa.selenium.remote.http.netty.NettyClient.&lt;clinit&gt;(NettyClient.java:47)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.openqa.selenium.remote.http.netty.NettyClient$Factory.createClient(NettyClient.java:134)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.openqa.selenium.remote.HttpCommandExecutor.&lt;init&gt;(HttpCommandExecutor.java:107)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.openqa.selenium.remote.HttpCommandExecutor.&lt;init&gt;(HttpCommandExecutor.java:94)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.openqa.selenium.remote.HttpCommandExecutor.&lt;init&gt;(HttpCommandExecutor.java:85)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.openqa.selenium.remote.service.DriverCommandExecutor.&lt;init&gt;(DriverCommandExecutor.java:80)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.openqa.selenium.chromium.ChromiumDriverCommandExecutor.&lt;init&gt;(ChromiumDriverCommandExecutor.java:35)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.openqa.selenium.chrome.ChromeDriver$ChromeDriverCommandExecutor.&lt;init&gt;(ChromeDriver.java:93)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:81)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:70)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at com.qualitesoft.core.InitializeTest.launchBrowser(InitializeTest.java:145)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at com.qualitesoft.core.InitializeTest.setUp(InitializeTest.java:94)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:376)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.testng.TestNG.runSuites(TestNG.java:1099)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.testng.TestNG.run(TestNG.java:1067)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+</td></tr>
+
+<tr>
+<td>3549</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.util.internal.PlatformDependent0 logger">io.netty.util.internal.PlatformDependent0</td>
+<td title="Message">java.nio.Bits.unaligned: available, true</td>
+</tr>
+
+<tr>
+<td>3605</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.util.internal.PlatformDependent0 logger">io.netty.util.internal.PlatformDependent0</td>
+<td title="Message">jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : small;" colspan="6">java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent0$7 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @5fe94a96
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:361)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:591)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at java.base/java.lang.reflect.Method.invoke(Method.java:558)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at io.netty.util.internal.PlatformDependent0$7.run(PlatformDependent0.java:409)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at java.base/java.security.AccessController.doPrivileged(Native Method)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at io.netty.util.internal.PlatformDependent0.&lt;clinit&gt;(PlatformDependent0.java:400)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:294)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at io.netty.util.internal.PlatformDependent.&lt;clinit&gt;(PlatformDependent.java:88)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at io.netty.util.HashedWheelTimer.&lt;init&gt;(HashedWheelTimer.java:114)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at io.netty.util.HashedWheelTimer.&lt;init&gt;(HashedWheelTimer.java:251)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at io.netty.util.HashedWheelTimer.&lt;init&gt;(HashedWheelTimer.java:224)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at io.netty.util.HashedWheelTimer.&lt;init&gt;(HashedWheelTimer.java:203)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.asynchttpclient.DefaultAsyncHttpClient.newNettyTimer(DefaultAsyncHttpClient.java:111)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.asynchttpclient.DefaultAsyncHttpClient.&lt;init&gt;(DefaultAsyncHttpClient.java:90)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.asynchttpclient.Dsl.asyncHttpClient(Dsl.java:32)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.openqa.selenium.remote.http.netty.NettyClient.createHttpClient(NettyClient.java:93)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.openqa.selenium.remote.http.netty.NettyClient.&lt;clinit&gt;(NettyClient.java:47)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.openqa.selenium.remote.http.netty.NettyClient$Factory.createClient(NettyClient.java:134)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.openqa.selenium.remote.HttpCommandExecutor.&lt;init&gt;(HttpCommandExecutor.java:107)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.openqa.selenium.remote.HttpCommandExecutor.&lt;init&gt;(HttpCommandExecutor.java:94)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.openqa.selenium.remote.HttpCommandExecutor.&lt;init&gt;(HttpCommandExecutor.java:85)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.openqa.selenium.remote.service.DriverCommandExecutor.&lt;init&gt;(DriverCommandExecutor.java:80)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.openqa.selenium.chromium.ChromiumDriverCommandExecutor.&lt;init&gt;(ChromiumDriverCommandExecutor.java:35)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.openqa.selenium.chrome.ChromeDriver$ChromeDriverCommandExecutor.&lt;init&gt;(ChromeDriver.java:93)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:81)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:70)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at com.qualitesoft.core.InitializeTest.launchBrowser(InitializeTest.java:145)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at com.qualitesoft.core.InitializeTest.setUp(InitializeTest.java:94)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:376)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.testng.TestNG.runSuites(TestNG.java:1099)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.testng.TestNG.run(TestNG.java:1067)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+</td></tr>
+
+<tr>
+<td>3620</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.util.internal.PlatformDependent0 logger">io.netty.util.internal.PlatformDependent0</td>
+<td title="Message">java.nio.DirectByteBuffer.&lt;init&gt;(long, int): unavailable</td>
+</tr>
+
+<tr>
+<td>3629</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.util.internal.PlatformDependent logger">io.netty.util.internal.PlatformDependent</td>
+<td title="Message">sun.misc.Unsafe: available</td>
+</tr>
+
+<tr>
+<td>3630</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.util.internal.PlatformDependent logger">io.netty.util.internal.PlatformDependent</td>
+<td title="Message">maxDirectMemory: 8589934592 bytes (maybe)</td>
+</tr>
+
+<tr>
+<td>3630</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.util.internal.PlatformDependent logger">io.netty.util.internal.PlatformDependent</td>
+<td title="Message">-Dio.netty.tmpdir: C:\Users\LOCAL_~1.G\Temp (java.io.tmpdir)</td>
+</tr>
+
+<tr>
+<td>3630</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.util.internal.PlatformDependent logger">io.netty.util.internal.PlatformDependent</td>
+<td title="Message">-Dio.netty.bitMode: 64 (sun.arch.data.model)</td>
+</tr>
+
+<tr>
+<td>3631</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.util.internal.PlatformDependent logger">io.netty.util.internal.PlatformDependent</td>
+<td title="Message">Platform: Windows</td>
+</tr>
+
+<tr>
+<td>3632</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.util.internal.PlatformDependent logger">io.netty.util.internal.PlatformDependent</td>
+<td title="Message">-Dio.netty.maxDirectMemory: -1 bytes</td>
+</tr>
+
+<tr>
+<td>3632</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.util.internal.PlatformDependent logger">io.netty.util.internal.PlatformDependent</td>
+<td title="Message">-Dio.netty.uninitializedArrayAllocationThreshold: -1</td>
+</tr>
+
+<tr>
+<td>3634</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.util.internal.CleanerJava9 logger">io.netty.util.internal.CleanerJava9</td>
+<td title="Message">java.nio.ByteBuffer.cleaner(): available</td>
+</tr>
+
+<tr>
+<td>3635</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.util.internal.PlatformDependent logger">io.netty.util.internal.PlatformDependent</td>
+<td title="Message">-Dio.netty.noPreferDirect: false</td>
+</tr>
+
+<tr>
+<td>3645</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.util.internal.PlatformDependent logger">io.netty.util.internal.PlatformDependent</td>
+<td title="Message">org.jctools-core.MpscChunkedArrayQueue: available</td>
+</tr>
+
+<tr>
+<td>3846</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.util.internal.InternalThreadLocalMap logger">io.netty.util.internal.InternalThreadLocalMap</td>
+<td title="Message">-Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024</td>
+</tr>
+
+<tr>
+<td>3847</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.util.internal.InternalThreadLocalMap logger">io.netty.util.internal.InternalThreadLocalMap</td>
+<td title="Message">-Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096</td>
+</tr>
+
+<tr>
+<td>3894</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.handler.ssl.JdkSslContext logger">io.netty.handler.ssl.JdkSslContext</td>
+<td title="Message">Default protocols (JDK): [TLSv1.3, TLSv1.2] </td>
+</tr>
+
+<tr>
+<td>3895</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.handler.ssl.JdkSslContext logger">io.netty.handler.ssl.JdkSslContext</td>
+<td title="Message">Default cipher suites (JDK): [TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384]</td>
+</tr>
+
+<tr>
+<td>3980</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.channel.MultithreadEventLoopGroup logger">io.netty.channel.MultithreadEventLoopGroup</td>
+<td title="Message">-Dio.netty.eventLoopThreads: 8</td>
+</tr>
+
+<tr>
+<td>4049</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.channel.nio.NioEventLoop logger">io.netty.channel.nio.NioEventLoop</td>
+<td title="Message">-Dio.netty.noKeySetOptimization: false</td>
+</tr>
+
+<tr>
+<td>4049</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.channel.nio.NioEventLoop logger">io.netty.channel.nio.NioEventLoop</td>
+<td title="Message">-Dio.netty.selectorAutoRebuildThreshold: 512</td>
+</tr>
+
+<tr>
+<td>4122</td>
+<td title="main thread">main</td>
+<td title="Level">TRACE</td>
+<td title="io.netty.channel.nio.NioEventLoop logger">io.netty.channel.nio.NioEventLoop</td>
+<td title="Message">instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@623dcf2a</td>
+</tr>
+
+<tr>
+<td>4124</td>
+<td title="main thread">main</td>
+<td title="Level">TRACE</td>
+<td title="io.netty.channel.nio.NioEventLoop logger">io.netty.channel.nio.NioEventLoop</td>
+<td title="Message">instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@3804a9a8</td>
+</tr>
+
+<tr>
+<td>4125</td>
+<td title="main thread">main</td>
+<td title="Level">TRACE</td>
+<td title="io.netty.channel.nio.NioEventLoop logger">io.netty.channel.nio.NioEventLoop</td>
+<td title="Message">instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@117525fe</td>
+</tr>
+
+<tr>
+<td>4139</td>
+<td title="main thread">main</td>
+<td title="Level">TRACE</td>
+<td title="io.netty.channel.nio.NioEventLoop logger">io.netty.channel.nio.NioEventLoop</td>
+<td title="Message">instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@5f7989fa</td>
+</tr>
+
+<tr>
+<td>4141</td>
+<td title="main thread">main</td>
+<td title="Level">TRACE</td>
+<td title="io.netty.channel.nio.NioEventLoop logger">io.netty.channel.nio.NioEventLoop</td>
+<td title="Message">instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@5bc28f40</td>
+</tr>
+
+<tr>
+<td>4142</td>
+<td title="main thread">main</td>
+<td title="Level">TRACE</td>
+<td title="io.netty.channel.nio.NioEventLoop logger">io.netty.channel.nio.NioEventLoop</td>
+<td title="Message">instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@46963479</td>
+</tr>
+
+<tr>
+<td>4143</td>
+<td title="main thread">main</td>
+<td title="Level">TRACE</td>
+<td title="io.netty.channel.nio.NioEventLoop logger">io.netty.channel.nio.NioEventLoop</td>
+<td title="Message">instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@7e74a380</td>
+</tr>
+
+<tr>
+<td>4144</td>
+<td title="main thread">main</td>
+<td title="Level">TRACE</td>
+<td title="io.netty.channel.nio.NioEventLoop logger">io.netty.channel.nio.NioEventLoop</td>
+<td title="Message">instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@6dd1c3ed</td>
+</tr>
+
+<tr>
+<td>4189</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.buffer.PooledByteBufAllocator logger">io.netty.buffer.PooledByteBufAllocator</td>
+<td title="Message">-Dio.netty.allocator.numHeapArenas: 8</td>
+</tr>
+
+<tr>
+<td>4189</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.buffer.PooledByteBufAllocator logger">io.netty.buffer.PooledByteBufAllocator</td>
+<td title="Message">-Dio.netty.allocator.numDirectArenas: 8</td>
+</tr>
+
+<tr>
+<td>4189</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.buffer.PooledByteBufAllocator logger">io.netty.buffer.PooledByteBufAllocator</td>
+<td title="Message">-Dio.netty.allocator.pageSize: 8192</td>
+</tr>
+
+<tr>
+<td>4189</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.buffer.PooledByteBufAllocator logger">io.netty.buffer.PooledByteBufAllocator</td>
+<td title="Message">-Dio.netty.allocator.maxOrder: 9</td>
+</tr>
+
+<tr>
+<td>4189</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.buffer.PooledByteBufAllocator logger">io.netty.buffer.PooledByteBufAllocator</td>
+<td title="Message">-Dio.netty.allocator.chunkSize: 4194304</td>
+</tr>
+
+<tr>
+<td>4190</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.buffer.PooledByteBufAllocator logger">io.netty.buffer.PooledByteBufAllocator</td>
+<td title="Message">-Dio.netty.allocator.smallCacheSize: 256</td>
+</tr>
+
+<tr>
+<td>4190</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.buffer.PooledByteBufAllocator logger">io.netty.buffer.PooledByteBufAllocator</td>
+<td title="Message">-Dio.netty.allocator.normalCacheSize: 64</td>
+</tr>
+
+<tr>
+<td>4190</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.buffer.PooledByteBufAllocator logger">io.netty.buffer.PooledByteBufAllocator</td>
+<td title="Message">-Dio.netty.allocator.maxCachedBufferCapacity: 32768</td>
+</tr>
+
+<tr>
+<td>4190</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.buffer.PooledByteBufAllocator logger">io.netty.buffer.PooledByteBufAllocator</td>
+<td title="Message">-Dio.netty.allocator.cacheTrimInterval: 8192</td>
+</tr>
+
+<tr>
+<td>4190</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.buffer.PooledByteBufAllocator logger">io.netty.buffer.PooledByteBufAllocator</td>
+<td title="Message">-Dio.netty.allocator.cacheTrimIntervalMillis: 0</td>
+</tr>
+
+<tr>
+<td>4191</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.buffer.PooledByteBufAllocator logger">io.netty.buffer.PooledByteBufAllocator</td>
+<td title="Message">-Dio.netty.allocator.useCacheForAllThreads: false</td>
+</tr>
+
+<tr>
+<td>4191</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.buffer.PooledByteBufAllocator logger">io.netty.buffer.PooledByteBufAllocator</td>
+<td title="Message">-Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023</td>
+</tr>
+
+<tr>
+<td>4236</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.buffer.ByteBufUtil logger">io.netty.buffer.ByteBufUtil</td>
+<td title="Message">-Dio.netty.allocator.type: pooled</td>
+</tr>
+
+<tr>
+<td>4237</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.buffer.ByteBufUtil logger">io.netty.buffer.ByteBufUtil</td>
+<td title="Message">-Dio.netty.threadLocalDirectBufferSize: 0</td>
+</tr>
+
+<tr>
+<td>4237</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.buffer.ByteBufUtil logger">io.netty.buffer.ByteBufUtil</td>
+<td title="Message">-Dio.netty.maxThreadLocalCharBufferSize: 16384</td>
+</tr>
+
+<tr>
+<td>7271</td>
+<td title="Forwarding newSession on session null to remote thread">Forwarding newSession on session null to remote</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.channel.DefaultChannelId logger">io.netty.channel.DefaultChannelId</td>
+<td title="Message">-Dio.netty.processId: 38576 (auto-detected)</td>
+</tr>
+
+<tr>
+<td>7274</td>
+<td title="Forwarding newSession on session null to remote thread">Forwarding newSession on session null to remote</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.util.NetUtil logger">io.netty.util.NetUtil</td>
+<td title="Message">-Djava.net.preferIPv4Stack: true</td>
+</tr>
+
+<tr>
+<td>7274</td>
+<td title="Forwarding newSession on session null to remote thread">Forwarding newSession on session null to remote</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.util.NetUtil logger">io.netty.util.NetUtil</td>
+<td title="Message">-Djava.net.preferIPv6Addresses: false</td>
+</tr>
+
+<tr>
+<td>7434</td>
+<td title="Forwarding newSession on session null to remote thread">Forwarding newSession on session null to remote</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.util.NetUtilInitializations logger">io.netty.util.NetUtilInitializations</td>
+<td title="Message">Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)</td>
+</tr>
+
+<tr>
+<td>7436</td>
+<td title="Forwarding newSession on session null to remote thread">Forwarding newSession on session null to remote</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.util.NetUtil logger">io.netty.util.NetUtil</td>
+<td title="Message">Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200</td>
+</tr>
+
+<tr>
+<td>7584</td>
+<td title="Forwarding newSession on session null to remote thread">Forwarding newSession on session null to remote</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.channel.DefaultChannelId logger">io.netty.channel.DefaultChannelId</td>
+<td title="Message">-Dio.netty.machineId: 60:45:bd:ff:fe:80:20:7e (auto-detected)</td>
+</tr>
+
+<tr>
+<td>7712</td>
+<td title="AsyncHttpClient-1-2 thread">AsyncHttpClient-1-2</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.buffer.AbstractByteBuf logger">io.netty.buffer.AbstractByteBuf</td>
+<td title="Message">-Dio.netty.buffer.checkAccessible: true</td>
+</tr>
+
+<tr>
+<td>7715</td>
+<td title="AsyncHttpClient-1-2 thread">AsyncHttpClient-1-2</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.buffer.AbstractByteBuf logger">io.netty.buffer.AbstractByteBuf</td>
+<td title="Message">-Dio.netty.buffer.checkBounds: true</td>
+</tr>
+
+<tr>
+<td>7716</td>
+<td title="AsyncHttpClient-1-2 thread">AsyncHttpClient-1-2</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.util.ResourceLeakDetectorFactory logger">io.netty.util.ResourceLeakDetectorFactory</td>
+<td title="Message">Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@6d2d05da</td>
+</tr>
+
+<tr>
+<td>7806</td>
+<td title="AsyncHttpClient-1-2 thread">AsyncHttpClient-1-2</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.util.Recycler logger">io.netty.util.Recycler</td>
+<td title="Message">-Dio.netty.recycler.maxCapacityPerThread: 4096</td>
+</tr>
+
+<tr>
+<td>7806</td>
+<td title="AsyncHttpClient-1-2 thread">AsyncHttpClient-1-2</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.util.Recycler logger">io.netty.util.Recycler</td>
+<td title="Message">-Dio.netty.recycler.ratio: 8</td>
+</tr>
+
+<tr>
+<td>7806</td>
+<td title="AsyncHttpClient-1-2 thread">AsyncHttpClient-1-2</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.util.Recycler logger">io.netty.util.Recycler</td>
+<td title="Message">-Dio.netty.recycler.chunkSize: 32</td>
+</tr>
+
+<tr>
+<td>7806</td>
+<td title="AsyncHttpClient-1-2 thread">AsyncHttpClient-1-2</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.util.Recycler logger">io.netty.util.Recycler</td>
+<td title="Message">-Dio.netty.recycler.blocking: false</td>
+</tr>
+
+<tr>
+<td>9672</td>
+<td title="AsyncHttpClient-1-2 thread">AsyncHttpClient-1-2</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.handler.codec.compression.Brotli logger">io.netty.handler.codec.compression.Brotli</td>
+<td title="Message">brotli4j not in the classpath; Brotli support will be unavailable.</td>
+</tr>
+
+<tr>
+<td>10196</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="io.netty.util.internal.ThreadLocalRandom logger">io.netty.util.internal.ThreadLocalRandom</td>
+<td title="Message">-Dio.netty.initialSeedUniquifier: 0x90a6fc5b34b13a6b</td>
+</tr>
+
+<tr>
+<td>10818</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">chrome browser launched successfully.</td>
+</tr>
+
+<tr>
+<td>12588</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">https://app.freightclub.com/Account/Login URL launched successfully.</td>
+</tr>
+
+<tr>
+<td>12604</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">*****************************Temp Run started.</td>
+</tr>
+
+<tr>
+<td>13619</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.xpath: //input[contains(@id,'Email')] found.</td>
+</tr>
+
+<tr>
+<td>14271</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Text send.</td>
+</tr>
+
+<tr>
+<td>14659</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.xpath: //input[contains(@id,'Password')] found.</td>
+</tr>
+
+<tr>
+<td>15087</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Text send.</td>
+</tr>
+
+<tr>
+<td>16131</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.xpath: //input[contains(@id,'Email')] found.</td>
+</tr>
+
+<tr>
+<td>18418</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Screenshot Login detail inserted successfully taken.</td>
+</tr>
+
+<tr>
+<td>18827</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.xpath: //input[contains(@type,'submit')] found.</td>
+</tr>
+
+<tr>
+<td>22561</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>29814</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Screenshot Login Successfully successfully taken.</td>
+</tr>
+
+<tr>
+<td>29959</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.xpath: //a[contains(@href,'/QuickQuote/QuickQuote')]/span[@class='link-title'] found.</td>
+</tr>
+
+<tr>
+<td>32205</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>122269</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.xpath: //a[contains(@href,'/Order/Index')] found.</td>
+</tr>
+
+<tr>
+<td>123849</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>243901</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.id: link-bol found.</td>
+</tr>
+
+<tr>
+<td>244952</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>335001</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.id: link-manage-invoices found.</td>
+</tr>
+
+<tr>
+<td>335952</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>456007</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.id: link-manage-overages found.</td>
+</tr>
+
+<tr>
+<td>456893</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>606938</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.xpath: //a[contains(@href,'/Claim/Index')] found.</td>
+</tr>
+
+<tr>
+<td>607941</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>807994</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.xpath: //a[@href='/Profile/Locations'] found.</td>
+</tr>
+
+<tr>
+<td>809021</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>1059056</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.xpath: //a[contains(@href,'/Product/UploadProducts')] found.</td>
+</tr>
+
+<tr>
+<td>1060459</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>1360516</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.xpath: //a[contains(@href,'/QuickQuote/QuickQuote')]/span[@class='link-title'] found.</td>
+</tr>
+
+<tr>
+<td>1362000</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>1452041</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.xpath: //a[contains(@href,'/Order/Index')] found.</td>
+</tr>
+
+<tr>
+<td>1453198</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>1573238</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.id: link-bol found.</td>
+</tr>
+
+<tr>
+<td>1574145</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>1664192</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.id: link-manage-invoices found.</td>
+</tr>
+
+<tr>
+<td>1665613</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>1785655</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.id: link-manage-overages found.</td>
+</tr>
+
+<tr>
+<td>1786554</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>1936589</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.xpath: //a[contains(@href,'/Claim/Index')] found.</td>
+</tr>
+
+<tr>
+<td>1937626</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>2137661</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.xpath: //a[@href='/Profile/Locations'] found.</td>
+</tr>
+
+<tr>
+<td>2138621</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>2388670</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.xpath: //a[contains(@href,'/Product/UploadProducts')] found.</td>
+</tr>
+
+<tr>
+<td>2389731</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>2689774</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.xpath: //a[contains(@href,'/QuickQuote/QuickQuote')]/span[@class='link-title'] found.</td>
+</tr>
+
+<tr>
+<td>2691213</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>2781261</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.xpath: //a[contains(@href,'/Order/Index')] found.</td>
+</tr>
+
+<tr>
+<td>2782685</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>2902727</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.id: link-bol found.</td>
+</tr>
+
+<tr>
+<td>2903590</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>2993636</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.id: link-manage-invoices found.</td>
+</tr>
+
+<tr>
+<td>2994675</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>3114723</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.id: link-manage-overages found.</td>
+</tr>
+
+<tr>
+<td>3115671</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>3265721</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.xpath: //a[contains(@href,'/Claim/Index')] found.</td>
+</tr>
+
+<tr>
+<td>3266587</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>3466626</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.xpath: //a[@href='/Profile/Locations'] found.</td>
+</tr>
+
+<tr>
+<td>3467405</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>3717447</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.xpath: //a[contains(@href,'/Product/UploadProducts')] found.</td>
+</tr>
+
+<tr>
+<td>3718790</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>4018842</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.xpath: //a[contains(@href,'/QuickQuote/QuickQuote')]/span[@class='link-title'] found.</td>
+</tr>
+
+<tr>
+<td>4020622</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>4110661</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.xpath: //a[contains(@href,'/Order/Index')] found.</td>
+</tr>
+
+<tr>
+<td>4112186</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>4232225</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.id: link-bol found.</td>
+</tr>
+
+<tr>
+<td>4233199</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>4323241</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.id: link-manage-invoices found.</td>
+</tr>
+
+<tr>
+<td>4324503</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>4444545</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.id: link-manage-overages found.</td>
+</tr>
+
+<tr>
+<td>4445489</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>4595526</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.xpath: //a[contains(@href,'/Claim/Index')] found.</td>
+</tr>
+
+<tr>
+<td>4596555</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>4796601</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.xpath: //a[@href='/Profile/Locations'] found.</td>
+</tr>
+
+<tr>
+<td>4797589</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>5047636</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.xpath: //a[contains(@href,'/Product/UploadProducts')] found.</td>
+</tr>
+
+<tr>
+<td>5048682</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>5348718</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.xpath: //a[contains(@href,'/QuickQuote/QuickQuote')]/span[@class='link-title'] found.</td>
+</tr>
+
+<tr>
+<td>5350101</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>5440151</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.xpath: //a[contains(@href,'/Order/Index')] found.</td>
+</tr>
+
+<tr>
+<td>5441531</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>5561565</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.id: link-bol found.</td>
+</tr>
+
+<tr>
+<td>5562386</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>5652419</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.id: link-manage-invoices found.</td>
+</tr>
+
+<tr>
+<td>5653357</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>5773390</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.id: link-manage-overages found.</td>
+</tr>
+
+<tr>
+<td>5774247</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>5924281</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.xpath: //a[contains(@href,'/Claim/Index')] found.</td>
+</tr>
+
+<tr>
+<td>5925374</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>6125411</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.xpath: //a[@href='/Profile/Locations'] found.</td>
+</tr>
+
+<tr>
+<td>6126310</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>6376339</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.xpath: //a[contains(@href,'/Product/UploadProducts')] found.</td>
+</tr>
+
+<tr>
+<td>6377518</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>6677564</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.xpath: //a[contains(@href,'/QuickQuote/QuickQuote')]/span[@class='link-title'] found.</td>
+</tr>
+
+<tr>
+<td>6679104</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>6769146</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.xpath: //a[contains(@href,'/Order/Index')] found.</td>
+</tr>
+
+<tr>
+<td>6770484</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>6890519</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.id: link-bol found.</td>
+</tr>
+
+<tr>
+<td>6891280</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>6981313</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.id: link-manage-invoices found.</td>
+</tr>
+
+<tr>
+<td>6986111</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>7106147</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.id: link-manage-overages found.</td>
+</tr>
+
+<tr>
+<td>7107074</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>7257120</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.xpath: //a[contains(@href,'/Claim/Index')] found.</td>
+</tr>
+
+<tr>
+<td>7258230</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>7458276</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.xpath: //a[@href='/Profile/Locations'] found.</td>
+</tr>
+
+<tr>
+<td>7459473</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>7709513</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.xpath: //a[contains(@href,'/Product/UploadProducts')] found.</td>
+</tr>
+
+<tr>
+<td>7710629</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>8010657</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.xpath: //a[contains(@href,'/QuickQuote/QuickQuote')]/span[@class='link-title'] found.</td>
+</tr>
+
+<tr>
+<td>8012176</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>8102213</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.xpath: //a[contains(@href,'/Order/Index')] found.</td>
+</tr>
+
+<tr>
+<td>8103373</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>8223404</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.id: link-bol found.</td>
+</tr>
+
+<tr>
+<td>8224164</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>8314211</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.id: link-manage-invoices found.</td>
+</tr>
+
+<tr>
+<td>8315067</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>8435106</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.id: link-manage-overages found.</td>
+</tr>
+
+<tr>
+<td>8435896</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>8585937</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.xpath: //a[contains(@href,'/Claim/Index')] found.</td>
+</tr>
+
+<tr>
+<td>8586851</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>8786885</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.xpath: //a[@href='/Profile/Locations'] found.</td>
+</tr>
+
+<tr>
+<td>8787605</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>9037646</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.xpath: //a[contains(@href,'/Product/UploadProducts')] found.</td>
+</tr>
+
+<tr>
+<td>9038564</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>9338603</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.xpath: //a[contains(@href,'/QuickQuote/QuickQuote')]/span[@class='link-title'] found.</td>
+</tr>
+
+<tr>
+<td>9339913</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>9429943</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.xpath: //a[contains(@href,'/Order/Index')] found.</td>
+</tr>
+
+<tr>
+<td>9430942</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>9550973</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.id: link-bol found.</td>
+</tr>
+
+<tr>
+<td>9551665</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>9641701</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.id: link-manage-invoices found.</td>
+</tr>
+
+<tr>
+<td>9642809</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>9762842</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.id: link-manage-overages found.</td>
+</tr>
+
+<tr>
+<td>9763682</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>9913720</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.xpath: //a[contains(@href,'/Claim/Index')] found.</td>
+</tr>
+
+<tr>
+<td>9914573</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>10114604</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.xpath: //a[@href='/Profile/Locations'] found.</td>
+</tr>
+
+<tr>
+<td>10115392</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+
+<tr>
+<td>10365427</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">Element by By.xpath: //a[contains(@href,'/Product/UploadProducts')] found.</td>
+</tr>
+
+<tr>
+<td>10366417</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="com.qualitesoft.core.Log logger">com.qualitesoft.core.Log</td>
+<td title="Message">WebElement clicked.</td>
+</tr>
+</table>
+<br>
+</body></html>
